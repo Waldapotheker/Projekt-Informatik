@@ -55,6 +55,14 @@ let KEY_SPACE = false;  //32
         function draw(){
             ctx.fillStyle = 'green'                             //Das ist der Hintergrund
             ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        }
+
+        drawHauptfigur();
+        
+        function drawHauptfigur(){
+            ctx.fillStyle = 'white'
+            ctx.fillRect (5, 10, 55, 50);
         }
 
         canvas.height = page.innerHeight;
