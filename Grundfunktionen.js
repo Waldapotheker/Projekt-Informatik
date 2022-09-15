@@ -21,6 +21,10 @@ let KEY_SPACE = false;  //32
                 KEY_RIGHT = true;
         }   
         }
+
+        
+        
+        
         document.onkeyup = function(e){
             if (e.keyCode == 32){      //Leertaste loslassen
                 KEY_SPACE = false;
@@ -50,20 +54,15 @@ let KEY_SPACE = false;  //32
     
         //"draw" Funktion lässt uns auf canvas zeichnen
         
-        draw();
+        drawSpielfeld();
         
-        function draw(){
+        function drawSpielfeld(){
             ctx.fillStyle = 'green'                             //Das ist der Hintergrund
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         }
 
-        drawHauptfigur();
-        
-        function drawHauptfigur(){
-            ctx.fillStyle = 'white'
-            ctx.fillRect (5, 10, 55, 50);
-        }
+       
 
         canvas.height = page.innerHeight;
         canvas.width = page.innerWidth;
