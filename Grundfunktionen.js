@@ -47,6 +47,13 @@ let KEY_SPACE = false;  //32
         //lässt js auf canvas zugreifen
         let canvas = document.getElementById ("canvas");
         let ctx = canvas.getContext ("2d");
+        
+        
+        //unterteilt canvas in Zeilen und Spalten
+        let rows = 100;
+        let cols = 100;
+        let cellWidth = canvas.width/cols;
+        letcellHeight = canvas.height/rows;
 
         //Sorgt dafür, das canvas fullscreen ist
         canvas.setAttribute('width', window.innerWidth);
@@ -55,6 +62,7 @@ let KEY_SPACE = false;  //32
         //"draw" Funktion lässt uns auf canvas zeichnen
         
         drawSpielfeld();
+        
         
         function drawSpielfeld(){
             ctx.fillStyle = 'green'                             //Das ist der Hintergrund
