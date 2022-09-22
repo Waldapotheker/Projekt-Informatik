@@ -1,3 +1,39 @@
+var x = 0;
+var y = 0;
+
+$(document).ready(function(){
+    takt = window.setInterval(taktung, 300);
+
+
+
+    var Spielfeld = document.getElementById('canvas');
+    canvas = Spielfeld.getContext('2d');
+
+    var Spielfigur = drawHauptfigur;
+    // Kommentar für Franz: Ab hier die Grafik für Spielfigur reinmachen, Code: Spielfigur.src = ...
+
+    Spielfigur.onload = function(){
+        canvas.drawSpielfeld(Spielfigur,x,y);
+    }
+
+    function taktung(){
+        console.log('Hallo');
+    }
+
+    $(document).bind('keydown', function (evt){
+        console.log('Tastaturcode:' + evt.keyCode);
+    });
+
+
+});
+
+
+
+
+
+
+
+
 let KEY_SPACE = false;  //32
         let KEY_UP = false;     //38
         let KEY_DOWN = false;   //40
@@ -22,8 +58,8 @@ let KEY_SPACE = false;  //32
         }   
         }
 
-        
-        
+
+
         
         document.onkeyup = function(e){
             if (e.keyCode == 32){      //Leertaste loslassen
@@ -43,7 +79,13 @@ let KEY_SPACE = false;  //32
         }   
         
         }
-    
+
+
+
+
+
+
+
         //lässt js auf canvas zugreifen
         let canvas = document.getElementById ("canvas");
         let ctx = canvas.getContext ("2d");
